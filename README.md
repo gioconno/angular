@@ -4,6 +4,18 @@ Source of this tutorial: https://www.udemy.com/course/the-complete-guide-to-angu
 
 *Note:* this tutorial is updated at every Angular release, so even if you see Angular v2 in the title, at the moment of writing this document the course was updated to Angular v9.
 
+## Useful links
+**Angular: ** https://angular.io/
+**Angular-cli: ** https://cli.angular.io/
+
+## Prerequisites
+Nodejs
+Angularcli
+
+## Lesson-1
+$ ng new my-first-app
+$ ng serve
+
 ## Troubleshooting
 
 ### Updating NodeJS:
@@ -32,3 +44,5 @@ npm cache verify
 
     My changes are not reflected in the browser (App is not compiling)
     Check if the window running ng serve  displays an error. If that's not the case, make sure you're using the latest CLI version and try restarting your CLI
+
+
