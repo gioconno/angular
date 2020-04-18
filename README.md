@@ -11,10 +11,19 @@ Source of this tutorial: https://www.udemy.com/course/the-complete-guide-to-angu
 ## Prerequisites
 Nodejs
 Angularcli
+Boostrap
 
 ## Lesson-1
 $ ng new my-first-app
 $ ng serve
+
+## Lesson-3
+(dentro la cartella di progetto)
+$ npm install --save bootstrap@3
+
+Modificare il file angualar.json aggiungendo alla sezione styles del file .css di bootstrap "node_modules/boostrap/dist/css/bootstrap.min.css"
+
+
 
 ## Troubleshooting
 
