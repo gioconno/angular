@@ -25,7 +25,15 @@ Modificare il file angualar.json aggiungendo alla sezione styles del file .css d
 
 Un componente può essere creato tramite il comando CLI ng generate component <nome_componente>
 
+## Assignment 1
+1. Create two new Components (manually or with CLI): WarningAlert and SuccessAlert
+2. Output them beneath each other in the AppComponent
+3. Output a warning or success message in the COmponents
+4. Style the Components appropriately (maybe some red/green text?)
 
+Use external or internal templates and styles!
+
+Feel free to create more components, nest them into each other or play around with different types of selectors!
 
 ## Troubleshooting
 
