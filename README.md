@@ -23,6 +23,8 @@ $ npm install --save bootstrap@3
 
 Modificare il file angualar.json aggiungendo alla sezione styles del file .css di bootstrap "node_modules/boostrap/dist/css/bootstrap.min.css"
 
+Un componente può essere creato tramite il comando CLI ng generate component <nome_componente>
+
 
 
 ## Troubleshooting
