@@ -4,6 +4,12 @@
     class="form-control"
     (input)="onUpdateServerName($event)" >
 
+<!-- Two-way-databinding -->
+<input
+    type="text"
+    class="form-control"
+    [(ngModel)]="serverName">
+
 <p>{{ serverName }}</p>
 
 <button 
