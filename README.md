@@ -7,6 +7,8 @@ Source of this tutorial: https://www.udemy.com/course/the-complete-guide-to-angu
 ## Useful links
 **Angular: ** https://angular.io/
 **Angular-cli: ** https://cli.angular.io/
+**Bootstrap**
+**Augury|https://augury.rangle.io/***
 
 ## Prerequisites
 Nodejs
