@@ -7,4 +7,11 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'course-project';
+
+  activeMenu = "recipes";
+
+  onMenuClick(menuVoice: string) {
+    this.activeMenu = menuVoice;
+  }
+
 }
