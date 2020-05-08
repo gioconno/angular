@@ -4,10 +4,12 @@ import { FormsModule } from '@angular/forms';
 
 
 import { AppComponent } from './app.component';
+import { BasicHiglightDirective } from './basic-higlight/basic-higlight.directive';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    BasicHiglightDirective
   ],
   imports: [
     BrowserModule,
