@@ -1,24 +1,29 @@
-import { Directive, Renderer2, OnInit, ElementRef, HostListener, HostBinding } from '@angular/core';
+import { Directive, Renderer2, OnInit, ElementRef, HostListener, HostBinding, Input } from '@angular/core';
 
 @Directive({
   selector: '[appBetterHighlight]'
 })
 export class BetterHighlightDirective implements OnInit {
-  @HostBinding('style.backgroundColor') backgroundColor = 'transparent';
+  @Input() defaultBackgroundColor = 'transparent';
+  @Input() highlightColor = 'blue';
+
+  @HostBinding('style.backgroundColor') backgroundColor = this.highlightColor;
   @HostBinding('style.color') textColor = 'black';
 
-  constructor(private elementRef: ElementRef, private renderer: Renderer2) {}
+  constructor(private elementRef: ElementRef, private renderer: Renderer2) { }
 
   ngOnInit(): void {
     // this.renderer.setStyle(this.elementRef.nativeElement, 'background-color', 'blue');
     // this.renderer.setStyle(this.elementRef.nativeElement, 'color', 'white');
+
+    this.backgroundColor = this.defaultBackgroundColor;
   }
 
   @HostListener('mouseenter') mouseEnter(eventData: Event) {
     // this.renderer.setStyle(this.elementRef.nativeElement, 'background-color', 'blue');
     // this.renderer.setStyle(this.elementRef.nativeElement, 'color', 'white');
 
-    this.backgroundColor = 'blue';
+    this.backgroundColor = this.highlightColor;
     this.textColor = 'white';
   }
 
@@ -26,7 +31,7 @@ export class BetterHighlightDirective implements OnInit {
     // this.renderer.setStyle(this.elementRef.nativeElement, 'background-color', 'transparent');
     // this.renderer.setStyle(this.elementRef.nativeElement, 'color', 'black ');
 
-    this.backgroundColor = 'transparent';
+    this.backgroundColor = this.defaultBackgroundColor;
     this.textColor = 'black';
   }
 
