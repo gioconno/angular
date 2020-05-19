@@ -4,7 +4,7 @@ import { Injectable, EventEmitter } from '@angular/core';
 // @Injectable() decorator should be placed on classes that need something to be injected in them.
 // But in latest versions on Angular, it is suggested to place this decorator on both sides
 // (source classes and destination classes), for future uses.
-@Injectable()
+@Injectable({providedIn: 'root'})
 export class AccountService {
     accounts = [
         {
