@@ -1,5 +1,5 @@
 import { LoggingService } from './logging.service';
-import { Injectable } from '@angular/core';
+import { Injectable, EventEmitter } from '@angular/core';
 
 // @Injectable() decorator should be placed on classes that need something to be injected in them.
 // But in latest versions on Angular, it is suggested to place this decorator on both sides
@@ -20,6 +20,8 @@ export class AccountService {
             status: 'unknown'
         }
     ];
+
+    statusUpdated = new EventEmitter<string>();
 
     constructor(private loggingService: LoggingService) { }
 
