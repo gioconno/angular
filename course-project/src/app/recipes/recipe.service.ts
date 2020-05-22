@@ -28,4 +28,8 @@ export class RecipeService {
     getRecipes() {
         return this.recipes.slice(); // Using slice() will return a copy of the array and not the (reference to) array iteself
     }
+
+    getRecipe(index: number): Recipe {
+        return this.recipes.slice()[index];
+    }
 }
