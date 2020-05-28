@@ -1,4 +1,4 @@
-import { Component, OnInit, OnDestroy } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
 
 import { interval, Subscription } from 'rxjs';
 
@@ -9,18 +9,19 @@ import { interval, Subscription } from 'rxjs';
 })
 export class HomeComponent implements OnInit, OnDestroy {
 
-  private countSubscription: Subscription;
+  private firstObsSubscription: Subscription;
 
-  constructor() { }
-
-  ngOnDestroy(): void {
-    this.countSubscription.unsubscribe();
+  constructor() {
   }
 
   ngOnInit() {
-    this.countSubscription = interval(1000).subscribe(count => {
+    this.firstObsSubscription = interval(1000).subscribe(count => {
       console.log(count);
     });
+  }
+
+  ngOnDestroy(): void {
+    this.firstObsSubscription.unsubscribe();
   }
 
 }
