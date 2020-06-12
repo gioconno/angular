@@ -8,13 +8,32 @@ import { NgForm } from '@angular/forms';
 })
 export class AppComponent {
 
-  @ViewChild('f', { static: false }) form: NgForm;
+  @ViewChild('f', { static: false }) myForm: NgForm;
   defaultQuestion = 'pet';
   defaultUsername = 'rik';
   answer = '';
+  genders = ['male', 'female'];
 
   suggestUserName() {
     const suggestedName = 'Superuser';
+
+    // With form.setValue you have to fill all the components of the form
+    // this.myForm.setValue({
+    //   userData: {
+    //     username: suggestedName,
+    //     email: 'suggested@rik.com'
+    //   },
+    //   gender: 'male',
+    //   secret: 'teacher',
+    //   questionAnswer: 'Tomasoni'
+    // });
+
+    // With patchValue() you can provide a subset of the components
+    this.myForm.form.patchValue({
+      userData: {
+        username: suggestedName
+      }
+    });
   }
 
   // Example with only local reference
@@ -24,7 +43,7 @@ export class AppComponent {
 
   // Example using @ViewChild
   onSubmit() {
-    console.log(this.form);
+    console.log(this.myForm);
   }
 
 }
